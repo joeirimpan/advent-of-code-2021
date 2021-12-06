@@ -50,9 +50,9 @@ func part1(depths []int) int {
 func part2(depths []int) int {
 	increased := 0
 	for i := 1; i < len(depths)-2; i++ {
-		a, b, c, d := depths[i-1], depths[i], depths[i+1], depths[i+2]
+		a, d := depths[i-1], depths[i+2]
 
-		if b+c+d > a+b+c {
+		if d > a {
 			increased++
 		}
 	}
